@@ -1,0 +1,25 @@
+/*overlay Mixins*/
+@mixin cover {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%; 
+}
+//Prefixes Mixin
+@mixin  prefixer ($property, $value) {
+   @content
+}
+
+// Animation Mixin
+@mixin keyFrame($anime) {
+    @-webkit-keyframes #{$anime} {
+        @content;
+     }
+     @-moz-keyframes #{$anime} {
+        @content;
+     }
+    @keyframes #{$anime} {
+       @content;
+    }
+}
